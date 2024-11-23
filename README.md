@@ -109,7 +109,7 @@ module.exports = {
       library: { type: "var", name: 'angular' },
       filename: "remoteEntry.js",
       exposes: {
-        './bootstrap': './src/bootstrap.ts',
+        './web-components': './src/bootstrap.ts',
       }
     })
   ],

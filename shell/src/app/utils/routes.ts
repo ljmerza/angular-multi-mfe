@@ -13,9 +13,9 @@ export function buildRoutes(options: CustomManifest): Routes {
                 matcher: startsWith(entry.routePath),
                 component: WebComponentWrapper,
                 data: {
-                    type: 'module',
+                    type: 'script',
                     remoteEntry: entry.remoteEntry,
-                    // remoteName: entry.remoteName,
+                    remoteName: entry.remoteName,
                     exposedModule: entry.exposedModule,
                     elementName: entry.elementName
                 } as any

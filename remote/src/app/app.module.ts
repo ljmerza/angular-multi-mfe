@@ -29,6 +29,7 @@ import { EmptyComponent } from './empty/empty.component';
     EmptyComponent
   ],
   providers: [],
+  bootstrap: [],
 })
 export class AppModule { 
   constructor(private injector: Injector) {
