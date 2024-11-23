@@ -1,22 +1,21 @@
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const {
+  shareAll,
+  withModuleFederationPlugin,
+} = require('@angular-architects/module-federation/webpack');
 
-module.exports = {
-  output: {
-    publicPath: "auto",
-    uniqueName: "angular"
+
+module.exports = withModuleFederationPlugin({
+  name: 'angular3',
+
+  exposes: {
+    './web-components': './src/bootstrap.ts',
   },
-  optimization: {
-    // Only needed to bypass a temporary bug
-    runtimeChunk: false
+
+  shared: {
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    }),
   },
-  plugins: [
-    new ModuleFederationPlugin({
-      name: "angular",
-      library: { type: "var", name: 'angular' },
-      filename: "remoteEntry.js",
-      exposes: {
-        './web-components': './src/bootstrap.ts',
-      }
-    })
-  ],
-};
+});

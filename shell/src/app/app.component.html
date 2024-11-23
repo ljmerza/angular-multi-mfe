@@ -1,7 +1,4 @@
 <div style='margin-bottom: 10px;'><a routerLink="/">Home</a></div>
-
-<div *ngFor="let key of objectKeys(manifest)">
-  <a [routerLink]="manifest[key].routePath">{{ manifest[key].remoteName }}</a>
-</div>
+<div style='margin-bottom: 10px;'><a routerLink="/angular">Angular child</a></div>
 
 <router-outlet />

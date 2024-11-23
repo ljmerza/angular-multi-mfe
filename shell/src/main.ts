@@ -1,6 +1,8 @@
-import { loadManifest } from '@angular-architects/module-federation';
+import { loadRemoteEntry } from '@angular-architects/module-federation';
 
- loadManifest("mf.manifest.json")
-   .catch(err => console.error(err))
-   .then(_ => import('./bootstrap'))
-   .catch(err => console.error(err));
+Promise.all([
+   loadRemoteEntry({ type: 'module', remoteEntry: 'http://localhost:4202/remoteEntry.js' })
+])
+.catch(err => console.error('Error loading remote entries', err))
+.then(() => import('./bootstrap'))
+.catch(err => console.error(err));

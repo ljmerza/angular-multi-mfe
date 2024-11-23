@@ -1,9 +1,0 @@
-{
-  "angular": {
-    "routePath": "angular",
-    "remoteEntry": "http://localhost:4202/remoteEntry.js",
-    "remoteName": "angular",
-    "exposedModule": "./web-components",
-    "elementName": "angular-element"
-  }
-}

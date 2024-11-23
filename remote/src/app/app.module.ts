@@ -36,9 +36,9 @@ export class AppModule {
 
   ngDoBootstrap() { 
     const ce = createCustomElement(AppComponent, {injector: this.injector});
-    customElements.define('angular-element', ce);
+    customElements.define('angular3-element', ce);
 
-    customElements.define('angular-a-element', createCustomElement(AComponent, {injector: this.injector}));
-    customElements.define('angular-b-element', createCustomElement(BComponent, {injector: this.injector}));
+    customElements.define('angular3-a-element', createCustomElement(AComponent, {injector: this.injector}));
+    customElements.define('angular3-b-element', createCustomElement(BComponent, {injector: this.injector}));
   }
 }
