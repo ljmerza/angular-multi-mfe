@@ -8,7 +8,6 @@ import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { EmptyComponent } from './empty/empty.component';
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -33,13 +32,13 @@ import { EmptyComponent } from './empty/empty.component';
 })
 export class AppModule { 
   constructor(private injector: Injector) {
+   }
+
+  ngDoBootstrap() { 
     const ce = createCustomElement(AppComponent, {injector: this.injector});
     customElements.define('angular-element', ce);
 
     customElements.define('angular-a-element', createCustomElement(AComponent, {injector: this.injector}));
     customElements.define('angular-b-element', createCustomElement(BComponent, {injector: this.injector}));
   }
-
-  ngDoBootstrap() { }
-
 }
