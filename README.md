@@ -158,3 +158,10 @@ export class AppModule {
 
 ```
 
+https://www.angulararchitects.io/en/blog/multi-framework-and-version-micro-frontends-with-module-federation-your-4-steps-guide/
+
+https://github.com/manfredsteyer/multi-framework-version/blob/main/projects/shell/src/main.ts
+
+https://github.com/manfredsteyer/angular3-app/blob/main/src/app/app.module.ts
+
+https://github.com/angular-architects/module-federation-plugin/blob/main/migration-guide-14.md
