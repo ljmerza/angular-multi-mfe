@@ -65,7 +65,8 @@
           "options": {
             "browserTarget": "mfe2:build",
             "extraWebpackConfig": "webpack.config.js",
-            "port": 4202
+            "port": 4202,
+            "publicHost": "http://localhost:4202"
           },
           "configurations": {
             "production": {
